@@ -342,10 +342,6 @@ a.formlink{padding:0 7px 0 7px; text-decoration:underline; font-size:80%;}
 .showpass_no{background-image:url(../img/ico_eye_no.png);}
 .form-group-login{position:relative;}
 
-@media screen and (max-width: 500px){
-	.paddingdiv	{padding:0 5% 0 5%; width:100%;}
-
-}
 .form-block2{width:320px;}
 
 
