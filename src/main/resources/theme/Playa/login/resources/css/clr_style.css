@@ -314,7 +314,7 @@ p.login-text{padding-top:20px;}
 
 a{font-size:90%; color:#007cbb;}
 span a{display:block; padding-top:15px;}
-a.formlink{padding:0 7px 0 7px; text-decoration:underline; font-size:80%;}
+a.formlink{text-decoration:underline; font-size:80%;}
 
 #kc-social-providers{padding-top:7px; display:block;}
 .login_social a img{display:block; float:left; border-radius:3px;}
