@@ -291,10 +291,6 @@ p.login-text{padding-top:20px;}
 	overflow: auto;
 }
 .authorize-form {
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
 	display: block;
 	border: none;
 }
@@ -324,9 +320,24 @@ a.formlink{padding:0 7px 0 7px; text-decoration:underline; font-size:80%;}
 .login_social a img{display:block; float:left; border-radius:3px;}
 .login_social a{padding-right:2px;}
 
-
-.showpass,.showpass_no{width:30px; height:30px;background-repeat:no-repeat; background-size:contain; display:block; position:absolute; /*right:10px;*/ left:320px;
+.width-320px {
+	width: 320px;
 }
+
+.width-200px {
+	width: 200px;
+}
+
+.showpass,.showpass_no {
+	width:30px;
+	height:30px;
+	background-repeat:no-repeat;
+	background-size:contain;
+	display:block;
+	position:absolute;
+	left:270px;
+}
+
 .showpass{background-image:url(../img/ico_eye.png);}
 .showpass_no{background-image:url(../img/ico_eye_no.png);}
 .form-group-login{position:relative;}
