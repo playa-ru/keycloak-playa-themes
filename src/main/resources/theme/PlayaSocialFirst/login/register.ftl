@@ -8,7 +8,7 @@
         <div class="modal-shadow register-shadow"   style="display:block; id="modal-shadow"></div>
         <div class="modal request-modal register-modal " id="modalwindow" >
             <div class="">
-                <div class="modal-dialog" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" style="width: 320px" role="dialog" aria-hidden="true">
                     <div class="modal-content">
                         <div class="modal-header">
                             <a class="close close_ccs" aria-label="Close" href="${url.loginUrl}"></a>
@@ -83,7 +83,7 @@
                                     </#if>
                                     <div class="btn-group btn-primary btn-request reg_form">
                                         <input class="btn btn-primary width-200px" name="register" type="submit" value="${msg("doRegister")}">
-                                        <span><a tabindex="5" href="${url.loginUrl}">${msg("doCancel")}</a></span>
+                                        <span><a tabindex="5" style="padding-left: 10px;" href="${url.loginUrl}">${msg("doCancel")}</a></span>
                                     </div>
                                 </section>
                                 <script>
