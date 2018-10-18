@@ -4,7 +4,7 @@
 
   <groupId>ru.playa.keycloak</groupId>
   <artifactId>keycloak-playa-themes</artifactId>
-  <version>1.0.10-SNAPSHOT</version>
+  <version>1.0.10</version>
 
   <description>
     Темы авторизации для Keycloak.
@@ -26,7 +26,7 @@
   <scm>
     <url>scm:git:git@github.com:playa-ru/keycloak-playa-themes.git</url>
     <developerConnection>scm:git:git@github.com:playa-ru/keycloak-playa-themes.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v1.0.10</tag>
   </scm>
 
   <distributionManagement>
