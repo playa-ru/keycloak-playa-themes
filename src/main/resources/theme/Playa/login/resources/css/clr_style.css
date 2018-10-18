@@ -106,7 +106,9 @@ body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,na
   height:80px;
 }
 
-.form-group-request{ padding-left:50px; margin-top:1vw; display:block; min-width:340px; }
+.form-group-request{
+  width: 270px;
+}
 
 /*form .form-group-request>label:first-child{ width:70px!important; }*/
 
@@ -356,7 +358,8 @@ a.formlink{text-decoration:underline; font-size:80%;}
 	background-size:contain;
 	display:block;
 	position:absolute;
-	left:430px;
+	left:220px;
+	top: 40px;
 }
 
 .showpass_register {

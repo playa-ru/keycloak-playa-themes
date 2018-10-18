@@ -8,7 +8,7 @@
         <div class="modal-shadow register-shadow"   style="display:block; id="modal-shadow"></div>
         <div class="modal request-modal register-modal " id="modalwindow" >
             <div class="">
-                <div class="modal-dialog" role="dialog" aria-hidden="true">
+                <div class="modal-dialog width-320px" role="dialog" aria-hidden="true">
                     <div class="modal-content">
                         <div class="modal-header">
                             <a class="close close_ccs" aria-label="Close" href="${url.loginUrl}"></a>

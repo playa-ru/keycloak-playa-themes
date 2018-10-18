@@ -105,7 +105,9 @@ flex:1 1 100%
   height:80px;
 }
 
-.form-group-request{ padding-left:50px; margin-top:1vw; display:block; min-width:340px; }
+.form-group-request{
+  width: 270px;
+}
 
 /*form .form-group-request>label:first-child{ width:70px!important; }*/
 
@@ -379,7 +381,8 @@ p.login-text{padding-top:20px;}
   background-size:contain;
   display:block;
   position:absolute;
-  left:430px;
+  left:220px;
+  top: 40px;
 }
 
 .showpass_register {
