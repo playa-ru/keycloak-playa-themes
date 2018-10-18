@@ -7,39 +7,41 @@
         ${msg("loginTitleHtml",(realm.displayNameHtml!''))?no_esc}
     <#elseif section = "form">
         <#if realm.password>
-            <form name="baseform" id="kc-form-login " class="authorize-form" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
-                <div class="width-320px">
-                    <div class="form-group form-group-login">
-                        <input tabindex="1" id="username" placeholder="${msg("lblEmailOrUsername")}" name="username" value="" size="45" type="text" autofocus="" autocomplete="off">
-                    </div>
-
-                    <div class="form-group form-group-login">
-                        <input tabindex="2" id="password" size="45" placeholder="${msg("password")}" class="" name="password" type="password" autocomplete="off">
-                        <div id=showpass class=showpass onclick="ShowHidePassword('password')"></div>
-                    </div>
-
-                    <div id="kc-form-buttons" class="btn-primary btn-request">
-                        <input class="btn btn-primary" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}">
-                        <a class="formlink" tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a> | <a class="formlink" tabindex="5" href="${url.registrationUrl}">${msg("doRegister")}</a>
-                    </div>
-
-                    <div class="form-group form-group-login-text column-container">
-                        <div class="group-title">${msg("lblOrAuthSocial")}
+            <form name="baseform" id="kc-form-login " class="${properties.kcFormClass!} authorize-form" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+                <div class="${properties.kcFormGroupClass!}">
+                    <div class="width-320px">
+                        <div class="form-group form-group-login">
+                            <input tabindex="1" id="username" placeholder="${msg("lblEmailOrUsername")}" name="username" value="${(login.username!'')}" size="45" type="text" autocomplete="off">
                         </div>
-                        <div id="kc-social-providers">
-                            <ul>
-                                <#if social.providers?has_content>
-                                    <#list social.providers as p>
-                                        <li>
-                                            <div  class="login_social">
-                                                <a href="${p.loginUrl}" id="zocial-${p.alias}" onclick="save('${url.loginUrl}')">
-                                                        <img src="${url.resourcesPath}/img/ico_${p.alias}.png"/>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </#list>
-                                </#if>
-                            </ul>
+
+                        <div class="form-group form-group-login">
+                            <input tabindex="2" id="password" size="45" placeholder="${msg("password")}" class="" name="password" type="password" autocomplete="off">
+                            <div id=showpass class=showpass onclick="ShowHidePassword('password')"></div>
+                        </div>
+
+                        <div id="kc-form-buttons" class="btn-primary btn-request">
+                            <input class="btn btn-primary" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}">
+                            <a class="formlink" tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a> | <a class="formlink" tabindex="5" href="${url.registrationUrl}">${msg("doRegister")}</a>
+                        </div>
+
+                        <div class="form-group form-group-login-text column-container">
+                            <div class="group-title">${msg("lblOrAuthSocial")}
+                            </div>
+                            <div id="kc-social-providers">
+                                <ul>
+                                    <#if social.providers?has_content>
+                                        <#list social.providers as p>
+                                            <li>
+                                                <div  class="login_social">
+                                                    <a href="${p.loginUrl}" id="zocial-${p.alias}" onclick="save('${url.loginUrl}')">
+                                                            <img src="${url.resourcesPath}/img/ico_${p.alias}.png"/>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </#list>
+                                    </#if>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

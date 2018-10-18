@@ -7,7 +7,7 @@
         ${msg("loginTitleHtml",(realm.displayNameHtml!''))?no_esc}
     <#elseif section = "form">
         <#if realm.password>
-            <form id="kc-form-login " class="${properties.kcFormClass!} authorize-form" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+            <form id="kc-form-login" class="${properties.kcFormClass!} authorize-form" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <div class="${properties.kcFormGroupClass!}">
                     <div class="width-320px">
                         <div id="part1">
