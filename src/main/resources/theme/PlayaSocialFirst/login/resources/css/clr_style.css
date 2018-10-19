@@ -107,6 +107,7 @@ flex:1 1 100%
 
 .form-group-request{
   width: 270px;
+  padding-bottom: 20px;
 }
 
 /*form .form-group-request>label:first-child{ width:70px!important; }*/
@@ -377,14 +378,14 @@ p.login-text{padding-top:20px;}
 }
 
 .showpass_register,.showpass_no_register {
-  width:30px;
-  height:30px;
-  background-repeat:no-repeat;
-  background-size:contain;
-  display:block;
-  position:absolute;
-  left:220px;
-  top: 40px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  left: 260px;
+  bottom: 80px;
 }
 
 .showpass_register {
