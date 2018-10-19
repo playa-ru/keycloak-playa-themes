@@ -102,7 +102,7 @@
         .addon{padding-left:25px;}
         .form-group-login-text{margin-left:0px;}
         .btn{height:40px; width:150px; border-top-right-radius:3px!important; border-bottom-right-radius:3px!imporant;  margin-top:3px;    line-height: 1.4rem; margin-right:30px;}
-        .form-block{height:500px;}
+        .form-block{height:500px; width: 320px;}
     </style>
     <script>
         function shadow(i) {
