@@ -24,7 +24,7 @@
                                     <input type="hidden" id="lastName" name="lastName" value="5f1b81b8-4f5d-11e8-9c2d-fa7ae01bbebc">
                                     <input type="hidden" id="username" name="username" value="${(register.formData.email!'')}">
                                     <div class="form-group-request">
-                                        <div style="width: 100%"${msg("lblEmailOrUsername")}</div>
+                                        <div style="width: 100%">${msg("lblEmailOrUsername")}</div>
                                         <input style="width: 100%" type="text" id="remail" name = "email" value="${(register.formData.email!'')}" placeholder="" size="45" />
                                     </div>
                                     <div class="form-group-request">

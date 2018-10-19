@@ -386,3 +386,8 @@ a.formlink{text-decoration:underline; font-size:80%;}
 	height: 15px;
 	background-image:url(../img/ico_close.png);
 }
+
+.form-block{
+	height:500px;
+	width: 320px;
+}

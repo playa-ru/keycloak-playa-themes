@@ -19,14 +19,9 @@
             </div>
 
             <div class="${properties.kcFormGroupClass!} restore-container">
-
-
                 <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!} row-container">
                     <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!} restore-button btn btn-primary btn-sm" type="submit"  value="${msg("doSubmit")}"/>
-
-                    <div class="${properties.kcFormOptionsWrapperClass!} back-link">
-                        <span><a href="${url.loginUrl}">${msg("backToLogin")?no_esc}</a></span>
-                    </div>
+                    <a class="back-link" href="${url.loginUrl}">${msg("backToLogin")?no_esc}</a>
                 </div>
             </div>
         </form>
