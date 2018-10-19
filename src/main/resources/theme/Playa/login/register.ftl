@@ -16,20 +16,20 @@
                         </div>
                         <div class="modal-body">
                             <form action="${url.registrationAction}" method="post" onchange="onchangef()" onsubmit="onsubmitf();">
-                                <section class="form-block">
-                                    <div class="form-group form-group form-group-request">
-                                        <label for="rfirstName">${msg("firstName")}</label>
-                                        <input type="text" id="rfirstName" name = "firstName"  value="${(register.formData.firstName!'')}" placeholder="" size="45">
+                                <section>
+                                    <div class="form-group-request">
+                                        <div style="width: 100%">${msg("firstName")}</div>
+                                        <input style="width: 100%" type="text" id="rfirstName" name = "firstName"  value="${(register.formData.firstName!'')}" placeholder="" size="45">
                                     </div>
                                     <input type="hidden" id="lastName" name="lastName" value="5f1b81b8-4f5d-11e8-9c2d-fa7ae01bbebc">
                                     <input type="hidden" id="username" name="username" value="${(register.formData.email!'')}">
-                                    <div class="form-group form-group form-group-request">
-                                        <label for="remail">${msg("lblEmailOrUsername")}</label>
-                                        <input type="text" id="remail" name = "email" value="${(register.formData.email!'')}" placeholder="" size="45" />
+                                    <div class="form-group-request">
+                                        <div style="width: 100%"${msg("lblEmailOrUsername")}</div>
+                                        <input style="width: 100%" type="text" id="remail" name = "email" value="${(register.formData.email!'')}" placeholder="" size="45" />
                                     </div>
-                                    <div class="form-group form-group form-group-request">
-                                        <label for="rpassword">${msg("password")}</label>
-                                        <input id="rpassword" size="45" placeholder="" class="" name="password" type="password">
+                                    <div class="form-group-request">
+                                        <div style="width: 100%">${msg("password")}</div>
+                                        <input style="width: 100%" id="rpassword" size="45" placeholder="" class="" name="password" type="password">
                                         <div id="showpass" class="showpass_register" onclick="ShowHidePassword('rpassword')"></div>
                                     </div>
                                     <input type="hidden" id="rpassword-confirm" name = "password-confirm" placeholder="" size="45">

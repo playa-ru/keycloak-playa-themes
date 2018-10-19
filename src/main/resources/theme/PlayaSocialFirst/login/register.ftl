@@ -16,7 +16,7 @@
                         </div>
                         <div class="modal-body">
                             <form action="${url.registrationAction}" method="post" onchange="onchangef()" onsubmit="onsubmitf();">
-                                <section class="">
+                                <section>
                                     <div class="form-group-request">
                                         <div style="width: 100%">${msg("firstName")}</div>
                                         <input style="width: 100%" type="text" id="rfirstName" name = "firstName"  value="${(register.formData.firstName!'')}" placeholder="" size="45">
