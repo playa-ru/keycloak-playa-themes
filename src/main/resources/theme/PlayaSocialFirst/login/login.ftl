@@ -7,68 +7,64 @@
         ${msg("loginTitleHtml",(realm.displayNameHtml!''))?no_esc}
     <#elseif section = "form">
         <#if realm.password>
-            <form id="kc-form-login" class="${properties.kcFormClass!} authorize-form" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
-                <div class="${properties.kcFormGroupClass!}">
-                    <div class="width-320px">
-                        <div id="part1">
-                            <div class="group-title">${msg("lblSocialEnter")}</div>
-                            <div class="form-group form-group-login-text column-container">
-                                <div id="kc-info" class="">
-                                    <div id="kc-info-wrapper" class="">
-                                        <div id="kc-social-providers">
-                                            <ul>
-                                                <#if social.providers?has_content>
-                                                    <#list social.providers as p>
-                                                        <li>
-                                                            <div class="login_social">
-                                                                <a href="${p.loginUrl}" id="zocial-${p.alias}" onclick="save('${url.loginUrl}')">
-                                                                    <img src="${url.resourcesPath}/img/ico_${p.alias}.png">
-                                                                </a>
-                                                            </div>
-                                                        </li>
-                                                    </#list>
-                                                </#if>
-                                            </ul>
-                                        </div>
-                                    </div>
+            <form id="kc-form-login" class="${properties.kcFormClass!} wrapper" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+                <div id="part1">
+                    <div class="group-title">${msg("lblSocialEnter")}</div>
+                    <div class="form-group form-group-login-text">
+                        <div id="kc-info" class="">
+                            <div id="kc-info-wrapper" class="">
+                                <div id="kc-social-providers">
+                                    <ul>
+                                        <#if social.providers?has_content>
+                                            <#list social.providers as p>
+                                                <li>
+                                                    <div class="login_social">
+                                                        <a href="${p.loginUrl}" id="zocial-${p.alias}" onclick="save('${url.loginUrl}')">
+                                                            <img src="${url.resourcesPath}/img/ico_${p.alias}.png">
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </#list>
+                                        </#if>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div id="part2">
-                            <div class="group-title">
-                                ${msg("lblIfAlreadyRegister")}
-                                <div class="link_css" onclick="show()">${msg("lblIfAlreadyRegisterEnter")}</div>
+                    <div id="part2">
+                        <div class="group-title">
+                            ${msg("lblIfAlreadyRegister")}
+                            <div class="link_css" onclick="show()">${msg("lblIfAlreadyRegisterEnter")}</div>
+                        </div>
+                        <div id="oauth" class="hide_css column-container">
+                            <div class="input-wrapper">
+                                <#if usernameEditDisabled??>
+                                    <input tabindex="1" class="input" id="username" placeholder="${msg("lblEmailOrUsername")}" name="username" value="${(login.username!'')}" size="45" type="text" disabled />
+                                <#else>
+                                    <input tabindex="1" class="input" id="username" placeholder="${msg("lblEmailOrUsername")}" name="username" value="${(login.username!'')}" size="45" type="text" autocomplete="off" />
+                                </#if>
                             </div>
-                            <div id="oauth" class="hide_css">
+                            <div class="${properties.kcFormGroupClass!}">
                                 <div class="form-group form-group-login">
-                                    <#if usernameEditDisabled??>
-                                        <input tabindex="1" id="username" placeholder="${msg("lblEmailOrUsername")}" name="username" value="${(login.username!'')}" size="45" type="text" disabled />
-                                    <#else>
-                                        <input tabindex="1" id="username" placeholder="${msg("lblEmailOrUsername")}" name="username" value="${(login.username!'')}" size="45" type="text" autocomplete="off" />
-                                    </#if>
-                                </div>
-                                <div class="${properties.kcFormGroupClass!}">
-                                    <div class="form-group form-group-login">
-                                        <input tabindex="2" id="password" size="45" placeholder="${msg("password")}" class="" name="password" type="password" autocomplete="off">
-                                        <div id=showpass class=showpass onclick="ShowHidePassword('password')"></div>
-                                    </div>
-                                </div>
-                                <div class="${properties.kcFormGroupClass!}">
-                                    <div id="kc-form-buttons" class="btn-group btn-primary btn-request">
-                                        <input class="btn btn-primary" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}">
-                                        <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
-                                    </div>
+                                    <input tabindex="2" class="input" id="password" size="45" placeholder="${msg("password")}" name="password" type="password" autocomplete="off">
+                                    <div id=showpass class=showpass onclick="ShowHidePassword('password')"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="part3">
-                            <div class="group-title">${msg("lblOrYouCan")} <div class="link_css" onclick="window.location.href='${url.registrationUrl}'; deleteCookie('email'); return true;">${msg("lblProcedureOfRegistration")}</div></div>
+                            <div class="${properties.kcFormGroupClass!} button-wrapper">
+                                <div id="kc-form-buttons" class=" button-wrapper-login">
+                                    <input class="button" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}">
+                                    <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div id="part3">
+                        <div class="group-title">${msg("lblOrYouCan")} <div class="link_css" onclick="window.location.href='${url.registrationUrl}'; deleteCookie('email'); return true;">${msg("lblProcedureOfRegistration")}</div></div>
+                    </div>
                 </div>
-            </form>
+            </div>
+        </form>
 
-            <script type="text/javascript">
+        <script type="text/javascript">
                 function save(s) {
                     window.localStorage.setItem("url_path", s);
                 }
@@ -119,8 +115,8 @@
                 function show() {
                     document.getElementById('oauth').className = 'show_css'
                 }
-            </script>
-        </#if>
+        </script>
+    </#if>
     <#elseif section = "info" >
 
     </#if>

@@ -7,20 +7,20 @@
         ${msg("loginTitleHtml",(realm.displayNameHtml!''))?no_esc}
     <#elseif section = "form">
         <#if realm.password>
-            <form name="baseform" id="kc-form-login " class="${properties.kcFormClass!} authorize-form" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+            <form name="baseform" id="kc-form-login " class="${properties.kcFormClass!} authorize-form wrapper" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                 <div class="${properties.kcFormGroupClass!}">
                     <div class="width-320px">
                         <div class="form-group form-group-login">
-                            <input tabindex="1" id="username" placeholder="${msg("lblEmailOrUsername")}" name="username" value="${(login.username!'')}" size="45" type="text" autocomplete="off">
+                            <input class="input-wrapper" tabindex="1" id="username" placeholder="${msg("lblEmailOrUsername")}" name="username" value="${(login.username!'')}" size="45" type="text" autocomplete="off">
                         </div>
 
                         <div class="form-group form-group-login">
-                            <input tabindex="2" id="password" size="45" placeholder="${msg("password")}" class="" name="password" type="password" autocomplete="off">
+                            <input class="input-wrapper" tabindex="2" id="password" size="45" placeholder="${msg("password")}" class="" name="password" type="password" autocomplete="off">
                             <div id=showpass class=showpass onclick="ShowHidePassword('password')"></div>
                         </div>
 
                         <div id="kc-form-buttons" class="btn-primary btn-request">
-                            <input class="btn btn-primary" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}">
+                            <input class="btn button btn-primary input-wrapper" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}">
                             <a class="formlink" tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a> | <a class="formlink" tabindex="5" href="${url.registrationUrl}">${msg("doRegister")}</a>
                         </div>
 
