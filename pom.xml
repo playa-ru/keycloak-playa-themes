@@ -23,6 +23,32 @@
     <version.release.plugin>2.5.3</version.release.plugin>
   </properties>
 
+  <name>Keycloak themes</name>
+  <url>https://github.com/playa-ru/keycloak-playa-themes</url>
+
+  <developers>
+    <developer>
+      <name>Anatoliy Pokhresniy</name>
+      <email>a.pohresniy@playa.ru</email>
+      <organization>Playa.Ru</organization>
+      <organizationUrl>https://playa.ru</organizationUrl>
+    </developer>
+    <developer>
+      <name>Sergey Bezrukov</name>
+      <email>s.bezrukov@playa.ru</email>
+      <organization>Playa.Ru</organization>
+      <organizationUrl>https://playa.ru</organizationUrl>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
   <scm>
     <url>scm:git:git@github.com:playa-ru/keycloak-playa-themes.git</url>
     <developerConnection>scm:git:git@github.com:playa-ru/keycloak-playa-themes.git</developerConnection>
